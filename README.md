@@ -1,2 +1,2 @@
-# cookie-stand
-Lab6
+# lab2
+"About me" lab2.

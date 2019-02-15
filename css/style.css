@@ -1,0 +1,11 @@
+body {
+    background-color: antiquewhite;
+}
+h1{
+    background-color: rgb(65, 250, 179);
+
+}
+img {
+    float: left;
+    margin-right: 25px;
+}
