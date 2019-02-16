@@ -7,7 +7,7 @@ var seatacUl = document.getElementById ('airport');
 var seattleCenterUl = document.getElementById ('seacenter');
 var capitolHillUl = document.getElementById ('capitolhill');
 var alkiUl = document.getElementById ('alkibeach');
-//
+//object for 1st and pike location
 var pikeLocation = {
   name: 'firstPike',
   cookiesAvg: 6.3,
@@ -31,7 +31,7 @@ var pikeLocation = {
 
   }
 };
-
+//object for seatac location
 var seaTacLocation = {
   Name: 'SeaTacAiport',
   cookiesAvg: 1.2,
@@ -52,7 +52,7 @@ var seaTacLocation = {
     console.log(this.cookiesHour);
   } 
 };
-
+//object for seattle center location
 var seaCenterLocation = {
   Name: 'seattleCenter',
   cookiesAvg: 3.7,
@@ -73,7 +73,7 @@ var seaCenterLocation = {
     console.log(this.cookiesHour);
   } 
 };
-
+//objecto for capitol hill location
 var capitolHillLocation = {
   Name: 'capitolHill',
   cookiesAvg: 2.3,
@@ -94,7 +94,7 @@ var capitolHillLocation = {
     console.log(this.cookiesHour);
   } 
 };
-
+//object for alki location
 var alkiLocation = {
   Name: 'capitolHill',
   cookiesAvg: 4.6,
