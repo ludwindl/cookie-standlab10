@@ -12,6 +12,7 @@ var pikeLocation = {
   name: 'firstPike',
   cookiesAvg: 6.3,
   cookiesHour: [],
+  total: 0,
   hourCust: function randFunction () {
     var x = Math.floor((Math.random()*42)+23);
     return x;
@@ -25,7 +26,7 @@ var pikeLocation = {
       liEl.textContent = msg;
       this.cookiesHour.push(math);
       pikeUl.appendChild(liEl);
-      
+     
     } 
     console.log(this.cookiesHour);
 
