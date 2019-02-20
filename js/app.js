@@ -9,12 +9,14 @@ var capitolHillUl = document.getElementById ('capitolhill');
 var alkiUl = document.getElementById ('alkibeach');
 //object for 1st and pike location
 var pikeLocation = {
-  name: 'firstPike',
+  //name: 'firstPike',
   cookiesAvg: 6.3,
   cookiesHour: [],
-  total: 0,
+  minCust: 23,
+  maxCust: 65,
+
   hourCust: function randFunction () {
-    var x = Math.floor((Math.random()*42)+23);
+    var x = Math.floor((Math.random() * (this.maxCust - this.minCust)) + this.minCust);
     return x;
   },
     
@@ -33,12 +35,16 @@ var pikeLocation = {
   }
 };
 //object for seatac location
+  
+
 var seaTacLocation = {
   Name: 'SeaTacAiport',
   cookiesAvg: 1.2,
   cookiesHour: [],
+  minCust: 3,
+  maxCust: 24,
   hourCust: function randFunction () {
-    var x = Math.floor ((Math.random()*42)+23);
+    var x = Math.floor ((Math.random() * (this.maxCust - this.minCust)) + this.minCust);
     return x;
   },
   render: function(){
@@ -58,8 +64,10 @@ var seaCenterLocation = {
   Name: 'seattleCenter',
   cookiesAvg: 3.7,
   cookiesHour: [],
+  minCust: 11,
+  maxCust: 38,
   hourCust: function randFunction () {
-    var x = Math.floor ((Math.random()*42)+23);
+    var x = Math.floor ((Math.random()*(this.maxCust - this.minCust))+this.minCust);
     return x;
   },
   render: function(){
@@ -79,8 +87,10 @@ var capitolHillLocation = {
   Name: 'capitolHill',
   cookiesAvg: 2.3,
   cookiesHour: [],
+  minCust: 20,
+  maxCust: 38,
   hourCust: function randFunction () {
-    var x = Math.floor ((Math.random()*42)+23);
+    var x = Math.floor ((Math.random()*(this.maxCust - this.minCust)) + this.minCust);
     return x;
   },
   render: function(){
@@ -100,8 +110,10 @@ var alkiLocation = {
   Name: 'capitolHill',
   cookiesAvg: 4.6,
   cookiesHour: [],
+  minCust: 2,
+  maxCust: 16,
   hourCust: function randFunction () {
-    var x = Math.floor ((Math.random()*42)+23);
+    var x = Math.floor ((Math.random() * (this.maxCust - this.minCust)) + this.minCust);
     return x;
   },
   render: function(){
