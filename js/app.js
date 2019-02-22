@@ -20,8 +20,8 @@ function CookieStand(name, cookiesAvg, minCust, maxCust, id){
     for (var i = 0; i < hours.length; i++){
       var math = ((this.hourCust()*this.cookiesAvg).toFixed(0));
       this.cookiesHour.push(math);
-      //this.totalCookies += math;
-    
+      this.totalCookies += math;
+      
     }
     
   };
