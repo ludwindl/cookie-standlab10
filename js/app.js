@@ -20,11 +20,12 @@ function CookieStand(name, cookiesAvg, minCust, maxCust, id){
     for (var i = 0; i < hours.length; i++){
       var math = ((this.hourCust()*this.cookiesAvg).toFixed(0));
       this.cookiesHour.push(math);
-      this.totalCookies += math;
+      this.totalCookies += parseInt(math);
       
     }
-    
+    console.log(this.cookiesHour);
   };
+  
   this.render = function(){
     this.cookiesHourTotal();
     var trEl = document.createElement('tr');
@@ -56,6 +57,7 @@ function createTable (){
     thEl.textContent = hours[i];
     trEl.appendChild(thEl);
   }
+  
   thEl = document.createElement('th');
   thEl.textContent = 'Location totals:';
   trEl.appendChild(thEl);
