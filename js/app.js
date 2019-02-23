@@ -72,7 +72,7 @@ function createFooter(){
   salesTable.appendChild(trEl);
 }
 
-var firstPike = new CookieStand ('Pike', 6.3, 23, 65, '1pike');
+var firstPike = new CookieStand ('1st and Pike', 6.3, 23, 65, '1pike');
 var seaTac = new CookieStand ('SeaTac', 1.2, 3, 22, 'airport');
 var seattleCenter = new CookieStand ('Seattle Center', 3.7, 11, 38, 'seacenter');
 var capitolHill = new CookieStand ('Capitol Hill', 2.3, 30, 38, 'capitolhill');
