@@ -67,7 +67,7 @@ function createTable (){
 function createFooter(){
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
-  thEl.textContent = 'Totals';
+  thEl.textContent = 'Totals:';
   trEl.appendChild(thEl);
   salesTable.appendChild(trEl);
 }
