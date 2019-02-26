@@ -70,6 +70,24 @@ function createFooter(){
   thEl.textContent = 'Totals:';
   trEl.appendChild(thEl);
   salesTable.appendChild(trEl);
+  
+  var totalTotalCookies = 0;
+  var hourlyTotal = 0;
+  for (var i = 0; i < hours.length; i++){
+    hourlyTotal = 0;
+    for (var j = 0; j < allShops.length; j++) {
+      hourlyTotal += parseInt(allShops[j].cookiesHour[i]);
+      totalTotalCookies += parseInt(allShops[j].cookiesHour[i]);
+      console.log(typeof (hourlyTotal));
+    }
+    thEl = document.createElement('th');
+    thEl.textContent = parseInt(hourlyTotal);
+    trEl.appendChild(thEl);
+  }
+  thEl = document.createElement('th');
+  thEl.textContent = totalTotalCookies;
+  trEl.appendChild(thEl);
+
 }
 
 var firstPike = new CookieStand ('1st and Pike', 6.3, 23, 65, '1pike');
@@ -78,7 +96,23 @@ var seattleCenter = new CookieStand ('Seattle Center', 3.7, 11, 38, 'seacenter')
 var capitolHill = new CookieStand ('Capitol Hill', 2.3, 30, 38, 'capitolhill');
 var alkiBeach = new CookieStand ('Alki', 2.6, 2, 16, 'alkibeach');
 
+
+
+
+
+var cookiesForm = document.getElementById('cookie-stand-form');
+
+function handleEvent (event){
+  event.preventDefault();
+  
+  console.log(event.target.newstore);
+}
+cookiesForm.addEventListener('submit', handleEvent);
+
+
 var allShops = [firstPike, seaTac, seattleCenter, capitolHill, alkiBeach];
+
+
 
 (function renderTable() {
   createTable();
