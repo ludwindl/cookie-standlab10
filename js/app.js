@@ -71,6 +71,7 @@ function createFooter(){
   trEl.appendChild(thEl);
   salesTable.appendChild(trEl);
   
+
   var totalTotalCookies = 0;
   var hourlyTotal = 0;
   for (var i = 0; i < hours.length; i++){
@@ -89,7 +90,6 @@ function createFooter(){
   trEl.appendChild(thEl);
 
 }
-
 var firstPike = new CookieStand ('1st and Pike', 6.3, 23, 65, '1pike');
 var seaTac = new CookieStand ('SeaTac', 1.2, 3, 22, 'airport');
 var seattleCenter = new CookieStand ('Seattle Center', 3.7, 11, 38, 'seacenter');
