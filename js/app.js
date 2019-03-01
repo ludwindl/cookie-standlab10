@@ -120,13 +120,13 @@ function handleEventCookies (event){
   event.target.mincust = null;
   event.target.maxcust = null;
 
-  allShops.unshift(theStore);
+  allShops.push(theStore);
   salesTable.innerHTML = '';
   createTable();
   for(var i = 0; i < allShops.length; i++) {
     allShops[i].render();
   }
-
+  createFooter();
 
 }
 
@@ -143,10 +143,10 @@ cookiesForm.addEventListener('submit', handleEventCookies);
   for(var i = 0; i < allShops.length; i++) {
     allShops[i].render();
   }
-  createFooter();
+  //createFooter();
 })();
 
-/*(function renderTable(){
+(function renderTable(){
   createFooter();
-})();*/
+})();
 
