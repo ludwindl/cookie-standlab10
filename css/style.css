@@ -2,7 +2,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 header {
-    background-color: rgb(80, 79, 79);
+    background-color: rgb(166, 217, 241);
     width: 100%;
     margin: 0 auto;
 }
@@ -47,14 +47,17 @@ section {
     margin: 0 auto;
 
 }
-#section ul {
+section ul li{
+    display: inline;
     text-align: center ;
+    margin-left: 250px;
 
 }
 section li {
     display: inline-block;
     padding: 15px;
 }
+
 #locations{
     background-color: darkgray;
 }
