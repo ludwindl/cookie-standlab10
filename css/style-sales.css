@@ -7,7 +7,7 @@ body {
     text-align: center;
  }
  
- table{
+ table {
      background-color: rgb(229, 235, 247);
      border: 2px solid;
      margin-right: auto;
@@ -22,4 +22,7 @@ td {
 
 tr th{
     border: 2px solid;
+}
+button {
+    
 }

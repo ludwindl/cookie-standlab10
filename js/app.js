@@ -101,7 +101,7 @@ var alkiBeach = new CookieStand ('Alki', 2.6, 2, 16, 'alkibeach');
 
 
 var cookiesForm = document.getElementById('cookie-stand-form');
-var newCookieArray = [];
+
 var allShops = [firstPike, seaTac, seattleCenter, capitolHill, alkiBeach];
 
 
@@ -120,13 +120,13 @@ function handleEventCookies (event){
   event.target.mincust = null;
   event.target.maxcust = null;
 
-  allShops.unshift(theStore);
+  allShops.push(theStore);
   salesTable.innerHTML = '';
   createTable();
   for(var i = 0; i < allShops.length; i++) {
     allShops[i].render();
   }
-
+  createFooter();
 
 }
 
@@ -143,10 +143,10 @@ cookiesForm.addEventListener('submit', handleEventCookies);
   for(var i = 0; i < allShops.length; i++) {
     allShops[i].render();
   }
-  createFooter();
+  //createFooter();
 })();
 
-/*(function renderTable(){
+(function renderTable(){
   createFooter();
-})();*/
+})();
 
