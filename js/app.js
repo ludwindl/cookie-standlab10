@@ -101,16 +101,40 @@ var alkiBeach = new CookieStand ('Alki', 2.6, 2, 16, 'alkibeach');
 
 
 var cookiesForm = document.getElementById('cookie-stand-form');
-
-function handleEvent (event){
-  event.preventDefault();
-  
-  console.log(event.target.newstore);
-}
-cookiesForm.addEventListener('submit', handleEvent);
-
-
+var newCookieArray = [];
 var allShops = [firstPike, seaTac, seattleCenter, capitolHill, alkiBeach];
+
+
+
+function handleEventCookies (event){
+  event.preventDefault();
+  var store = event.target.newstore.value;
+  var avgC = event.target.cookiesaverage.value;
+  var minC = event.target.mincust.value;
+  var maxC = event.target.maxcust.value;
+
+  var theStore = new CookieStand (store, avgC, minC, maxC);
+
+  event.target.newstore = null;
+  event.target.cookiesaverage = null;
+  event.target.mincust = null;
+  event.target.maxcust = null;
+
+  allShops.unshift(theStore);
+  salesTable.innerHTML = '';
+  createTable();
+  for(var i = 0; i < allShops.length; i++) {
+    allShops[i].render();
+  }
+
+
+}
+
+
+cookiesForm.addEventListener('submit', handleEventCookies);
+
+
+//var allShops = [firstPike, seaTac, seattleCenter, capitolHill, alkiBeach];
 
 
 
@@ -119,9 +143,10 @@ var allShops = [firstPike, seaTac, seattleCenter, capitolHill, alkiBeach];
   for(var i = 0; i < allShops.length; i++) {
     allShops[i].render();
   }
-})();
-
-(function renderTable(){
   createFooter();
 })();
+
+/*(function renderTable(){
+  createFooter();
+})();*/
 
