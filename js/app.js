@@ -101,7 +101,7 @@ var alkiBeach = new CookieStand ('Alki', 2.6, 2, 16, 'alkibeach');
 
 
 var cookiesForm = document.getElementById('cookie-stand-form');
-var newCookieArray = [];
+
 var allShops = [firstPike, seaTac, seattleCenter, capitolHill, alkiBeach];
 
 
